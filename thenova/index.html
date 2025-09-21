@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <canvas id="particles-canvas"></canvas>
+    
     <header>
         <div class="container">
             <div class="logo">The Nova</div>
@@ -42,5 +44,34 @@
         </div>
     </main>
 
-    <script src="js/script.js"></script> </body>
+    <section class="info-cards-section">
+        <div class="container">
+            <div class="info-cards">
+                <div class="card">
+                    <img src="img/icon_players.png" alt="Активные игроки">
+                    <h3>69</h3>
+                    <p>Активных игроков</p>
+                </div>
+                <div class="card">
+                    <img src="img/icon_uptime.png" alt="Время работы">
+                    <h3>99.9%</h3>
+                    <p>Время работы</p>
+                </div>
+                <div class="card">
+                    <img src="img/icon_support.png" alt="Поддержка">
+                    <h3>24/7</h3>
+                    <p>Поддержка</p>
+                </div>
+                <div class="card">
+                    <img src="img/icon_rating1.png" alt="Обновления">
+                    <h3>Постоянные</h3>
+                    <p>Обновления</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/particle.js"></script>
+    <script src="js/script.js"></script>
+</body>
 </html>
