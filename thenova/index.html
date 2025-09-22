@@ -13,7 +13,7 @@
     <canvas id="particles-canvas"></canvas>
     
     <header>
-        <div class="container">
+        <div class="container">  
             <div class="logo">The Nova</div>
             <nav>
                 <ul>
@@ -23,19 +23,20 @@
                     <li><a href="#">Магазин</a></li>
                 </ul>
             </nav>
-            <a href="#" class="btn-play">Играть сейчас</a>
+            <button id="play-discord" class="btn-play">Играть сейчас</button>
         </div>
     </header>
 
     <main>
+        
         <div class="container main-content">
             <div class="text-content">
                 <span class="tag">Приватный ванильный сервер Minecraft 1.21.4</span>
                 <h1>Сделай свою историю</h1>
                 <p class="description">Добро пожаловать на The Nova — полу-ванильный сервер Minecraft, где ты творишь историю! Управляй захватывающим сюжетом вместе с другими игроками, участвуй в эпичных ивентах, которые поднимут тебе настроение, и наслаждайся ванильной атмосферой с лёгким привкусом уникальности благодаря тщательно подобранным датапакам и плагинам. Присоединяйся к The Nova.</p>
                 <div class="buttons">
-                    <button id="copy-btn" class="btn-copy">Копировать IP</button>
-                    <span id="server-ip" class="server-ip">mc.thenova.vip</span>
+                    <button id="how-to-play-btn" class="btn-play-action">Как играть?</button>
+                    <button id="copy-btn" class="btn-copy">mc.thenova.vip</button>
                 </div>
             </div>
             <div class="image-content">
@@ -46,30 +47,66 @@
 
     <section class="info-cards-section">
         <div class="container">
+            <h2 class="section-title">Факты о сервере</h2>
             <div class="info-cards">
                 <div class="card">
-                    <img src="img/icon_players.png" alt="Активные игроки">
-                    <h3>69</h3>
-                    <p>Активных игроков</p>
+                    <img src="img/globe.png" alt="Активные игроки">
+                    <h3>Активное</h3>
+                    <p>Сообщество</p>
                 </div>
                 <div class="card">
-                    <img src="img/icon_uptime.png" alt="Время работы">
+                    <img src="img/wifi.png" alt="Время работы">
                     <h3>99.9%</h3>
                     <p>Время работы</p>
                 </div>
                 <div class="card">
-                    <img src="img/icon_support.png" alt="Поддержка">
+                    <img src="img/shield-check.png" alt="Поддержка">
                     <h3>24/7</h3>
                     <p>Поддержка</p>
                 </div>
                 <div class="card">
-                    <img src="img/icon_rating1.png" alt="Обновления">
+                    <img src="img/gamepad.png" alt="Обновления">
                     <h3>Постоянные</h3>
                     <p>Обновления</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <section class="qa-section">
+        <div class="container">
+            <h2 class="section-title">Ответы на часто задаваемые вопросы</h2>
+
+            <div class="qa-content">
+                <div id="season-content" class="content-section active">
+                    <div class="card">
+                        <h4>Когда был вайп?</h4>
+                        <p>8 сезон начался 14 июня 2025</p>
+                    </div>
+                    <div class="card">
+                        <h4>Когда новый сезон?</h4>
+                        <p>О новом сезоне мы объявляем сильно заранее до вайпа, чтобы игроки успели завершить свои проекты</p>
+                    </div>
+                    <div class="card">
+                        <h4>Сколько длится сезон?</h4>
+                        <p>Текущий сезон продлится не менее полугода</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+        <footer>
+        <div class="container">
+            <h3 class="copyright">
+                &copy; 2025 The Nova. Все права защищены.
+            </h3>
+            <h3 class="disclaimer">
+                Не является официальным продуктом Minecraft. Не связано с MOJANG и MICROSOFT.
+            </h3>
+        </div>
+    </footer>
 
     <script src="js/particle.js"></script>
     <script src="js/script.js"></script>

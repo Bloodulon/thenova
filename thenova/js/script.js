@@ -1,26 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    const howToPlayButton = document.getElementById('how-to-play-btn');
+    const playdiscord = document.getElementById('play-discord');
+
     const copyButton = document.getElementById('copy-btn');
-    const serverIpSpan = document.getElementById('server-ip');
+    const serverIp = 'mc.thenova.vip';
 
-    copyButton.addEventListener('click', () => {
-        const ipText = serverIpSpan.textContent;
+    function copyIp() {
+        navigator.clipboard.writeText(serverIp).then(() => {
+        }).catch(err => {
+            console.error('Не удалось скопировать IP-адрес: ', err);
+        });
+    }
 
-        navigator.clipboard.writeText(ipText)
-            .then(() => {
+    if (playdiscord) {
+        playdiscord.addEventListener('click', () => {
+            window.location.href = 'https://discord.gg/a7C3UMCrDX';
+        });
+    }
 
-                console.log('IP адрес скопирован!');
-                const originalText = copyButton.textContent;
-                copyButton.textContent = 'Скопировано!';
+    if (howToPlayButton) {
+        howToPlayButton.addEventListener('click', () => {
+            window.location.href = 'https://t.me/thenovavip';
+        });
+    }
 
-                setTimeout(() => {
-                    copyButton.textContent = originalText;
-                }, 2000);
-            })
-            .catch(err => {
-                console.error('Не удалось скопировать текст: ', err);
-                alert('Не удалось скопировать IP. Попробуйте скопировать вручную: ' + ipText);
-            });
-    });
+    if (copyButton) {
+        copyButton.addEventListener('click', copyIp);
+    }
 });
 
 document.addEventListener('DOMContentLoaded', (event) => {
@@ -59,4 +66,50 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const categoryButtons = document.querySelectorAll('.category-btn');
+    const contentSections = document.querySelectorAll('.content-section');
+
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+
+            button.classList.add('active');
+
+            const targetId = button.getAttribute('data-target');
+
+            contentSections.forEach(section => {
+                section.style.display = 'none';
+                section.classList.remove('active');
+            });
+
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.style.display = 'grid';
+                targetSection.classList.add('active');
+            }
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const qaElement = document.querySelector('.qa-content');
+
+    const qaObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    if (qaElement) {
+        qaObserver.observe(qaElement);
+    }
 });
