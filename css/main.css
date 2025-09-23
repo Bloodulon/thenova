@@ -5,7 +5,6 @@
 @import url('./components/cards.css');
 @import url('./components/header.css');
 
-/* Main content styles */
 .main-content {
     display: flex;
     justify-content: space-between;
@@ -64,11 +63,10 @@
     transition: transform 0.2s ease-in-out;
 }
 
-/* Footer */
 footer {
     padding: 50px 0;
     text-align: center;
-    background-color: var(--bg-footer);
+    background: var(--bg-footer);
     color: var(--color-text-footer);
     font-size: 0.9em;
     border-top: var(--border-footer);
@@ -84,7 +82,6 @@ footer p {
     line-height: 1.5;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .container {
         padding: 0 15px;

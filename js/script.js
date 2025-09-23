@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function copyIp() {
         navigator.clipboard.writeText(serverIp).then(() => {
         }).catch(err => {
-            console.error('Не удалось скопировать IP-адрес: ', err);
         });
     }
 

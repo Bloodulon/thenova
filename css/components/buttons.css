@@ -1,5 +1,5 @@
 .btn-play-action {
-    background-color: var(--bg-btn-play-action);
+    background: var(--bg-btn-play-action);
     border: 2px solid var(--color-accent);
     color: var(--color-text-primary);
     padding: 18px 25px;
@@ -8,7 +8,7 @@
     font-weight: bold;
     cursor: pointer;
     margin-right: 40px;
-    transition: transform 0.2s, background-color 0.2s, box-shadow 0.3s;
+    transition: transform 0.3s, background-color 0.2s, box-shadow 0.3s;
     z-index: 1;
 }
 
@@ -28,7 +28,7 @@
     font-weight: bold;
     cursor: pointer;
     margin-right: 10px;
-    transition: transform 0.2s, background-color 0.2s, box-shadow 0.3s;
+    transition: transform 0.3s, background-color 0.2s, box-shadow 0.3s;
     z-index: 1;
 }
 
@@ -39,7 +39,7 @@
 }
 
 .btn-play {
-    background-color: var(--bg-btn-play);
+    background: var(--bg-btn-play);
     border: 2px solid var(--color-accent);
     color: var(--color-btn-play-text);
     padding: 15px 30px;
