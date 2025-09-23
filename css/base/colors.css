@@ -1,0 +1,42 @@
+:root {
+    --bg-body: radial-gradient(circle, #042233, #000000);
+    --bg-header: rgba(35, 70, 68, 0.185);
+    --bg-header-gradient: linear-gradient(90deg, #0ec5adce 0%, #182830 80%);
+    --bg-tag: radial-gradient(circle, #1f756ac5, #022f35);
+    --bg-card: radial-gradient(circle, #2585888e, #021f2c98);
+    --bg-footer: #0b0d1a;
+    --bg-btn-play: #063535;
+    --bg-btn-play-action: #04202b;
+    --bg-btn-copy: #36737e;
+    --bg-nav-active: linear-gradient(90deg, #0ec5adce 20%, #182830 80%);
+    --bg-nav-hover-underline: linear-gradient(90deg, #00FFFF 0%, #1a2333 100%);
+    --bg-category-btn: #333;
+    --bg-category-btn-active: #555;
+
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #ccc;
+    --color-text-muted: rgb(158, 158, 158);
+    --color-text-footer: #888;
+    --color-accent: #00FFFF;
+    --color-accent-hover: #1affff;
+    --color-accent-glow: rgba(0, 255, 255, 0.6);
+    --color-h2: #00FFFF;
+    --color-h3: #788585;
+    --color-h4: #55b8b8;
+    --color-tag: #e0e0e0;
+    --color-card-title: #00FFFF;
+    --color-card-text: #e0e0e0;
+    --color-btn-play-text: #000000b2;
+    --color-btn-border: #152538;
+    --color-btn-play-action-hover: #5d42e4;
+    --color-btn-copy-hover: #2d419b;
+
+    --shadow-header-underline: 2px;
+    --shadow-btn-play: 0 4px 15px rgba(0, 255, 255, 0.233);
+    --shadow-btn-play-hover: 0 8px 25px rgba(0, 255, 255, 0.6);
+    --shadow-tag: 0 5px 11px rgba(0, 255, 255, 0.6);
+    --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --shadow-card-hover: 0 0 10px #00FFFF;
+    --shadow-nav-active: 0 2px 10px rgba(0, 0, 0, 0.3);
+    --border-footer: 1px solid rgba(255, 255, 255, 0.1);
+}

@@ -1,0 +1,155 @@
+@import url('./base/colors.css');
+@import url('./base/reset.css');
+@import url('./base/typography.css');
+@import url('./components/buttons.css');
+@import url('./components/cards.css');
+@import url('./components/header.css');
+
+/* Main content styles */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 100px;
+    min-height: calc(100vh - 150px);
+}
+
+.text-content {
+    max-width: 55%;
+}
+
+.tag {
+    background: var(--bg-tag);
+    padding: 8px 15px;
+    border-radius: 19px;
+    font-size: 19px;
+    color: var(--color-tag);
+    box-shadow: var(--shadow-tag);
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.server-ip {
+    margin-left: 0;
+    margin-top: 10px;
+    text-align: center;
+    color: var(--color-text-secondary);
+}
+
+.image-content {
+    max-width: 45%;
+}
+
+.image-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    z-index: 2;
+}
+
+.social-links a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Footer */
+footer {
+    padding: 50px 0;
+    text-align: center;
+    background-color: var(--bg-footer);
+    color: var(--color-text-footer);
+    font-size: 0.9em;
+    border-top: var(--border-footer);
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .btn-play {
+        margin-top: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    nav li {
+        margin: 5px 0;
+    }
+
+    .main-content {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .text-content {
+        max-width: 100%;
+    }
+
+    .image-content {
+        max-width: 80%;
+        margin-top: 30px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-copy {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .server-ip {
+        margin-left: 0;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 40px;
+        line-height: 1.2;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .info-cards {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
