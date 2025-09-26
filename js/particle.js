@@ -60,8 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             this.x += this.speedX;
             this.y += this.speedY;
-            
-            // Если частица вышла за пределы экрана, "возрождаем" её
+
             if (this.x > window.innerWidth || this.x < 0 || this.y > window.innerHeight || this.y < 0) {
                 this.x = Math.random() * window.innerWidth;
                 this.y = Math.random() * window.innerHeight;

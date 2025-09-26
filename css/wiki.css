@@ -1,0 +1,313 @@
+/*
+ __________.__                    .___    .__
+ \______   \  |   ____   ____   __| _/_ __|  |   ____   ____  
+ |    |  _/  |  /  _ \ /  _ \ / __ |  |  \  |  /  _ \ /    \ 
+ |    |   \  |_(  <_> |  <_> ) /_/ |  |  /  |_(  <_> )   |  \
+ |______  /____/\____/ \____/\____ |____/|____/\____/|___|  / 
+          \/                        \/                      \/
+*/
+
+@import url('./base/colors.css');
+@import url('./base/reset.css');
+@import url('./base/typography.css');
+@import url('./components/buttons.css');
+@import url('./components/cards.css');
+@import url('./components/header.css');
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 80px;
+    background-color: var(--color-header-bg, #0a0a1a);
+    flex-shrink: 0;
+}
+
+.wiki-section {
+    padding: 100px 0 40px;
+    background-color: var(--color-bg-dark, #0f0f1a);
+    flex: 1;
+}
+
+.wiki-container {
+    display: flex;
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 40px;
+    align-items: stretch;
+}
+
+.sidebar {
+    flex: 0 0 300px;
+    background-color: var(--color-card-bg, #1a1a2e);
+    padding: 25px 0;
+    border-radius: 12px;
+    position: static;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.sidebar-title {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 15px 25px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-family: 'Montserrat', sans-serif;
+    flex-shrink: 0;
+}
+
+.sidebar-nav {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-item {
+    display: block;
+    padding: 14px 25px;
+    text-decoration: none;
+    color: var(--color-text-secondary, #a0a0c0);
+    transition: all 0.3s ease;
+    font-size: 0.98rem;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 0 8px 8px 0;
+    flex-shrink: 0;
+}
+
+.nav-item:hover {
+    background-color: var(--color-accent-hover, #2a2a44);
+    color: #fff;
+    transform: translateX(5px);
+}
+
+.nav-item.active {
+    background-color: var(--color-accent, #4a4a80);
+    color: #fff;
+    border-left: 4px solid var(--color-primary, #bb86fc);
+    padding-left: 21px;
+    font-weight: 600;
+}
+
+.nav-heading {
+    color: var(--color-text-muted, #707090);
+    font-size: 0.9rem;
+    padding: 20px 25px 8px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 10px;
+    flex-shrink: 0;
+}
+
+.wiki-content {
+    flex-grow: 1;
+    background-color: var(--color-card-bg, #1a1a2e);
+    padding: 40px;
+    border-radius: 12px;
+    color: var(--color-text-primary, #e0e0e0);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-header {
+    flex-shrink: 0;
+    margin-bottom: 20px;
+}
+
+.content-banner {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+.content-title {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.2;
+    flex-shrink: 0;
+}
+
+.content-subtitle {
+    font-size: 1.8rem;
+    margin: 35px 0 20px;
+    color: #fff;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    flex-shrink: 0;
+}
+
+.wiki-content p {
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.wiki-content h1, .wiki-content h2 {
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.dummy-content {
+    margin-top: 40px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    flex-shrink: 0;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    display: block;
+}
+
+footer {
+    flex-shrink: 0; /* Не сжимается */
+    background-color: var(--color-footer-bg, #0a0a1a);
+    padding: 20px 0;
+    text-align: center;
+    color: #a0a0c0;
+}
+
+@media (max-width: 1024px) {
+    .wiki-container {
+        width: 98%;
+        gap: 30px;
+    }
+    
+    .sidebar {
+        flex: 0 0 250px;
+    }
+    
+    .wiki-content {
+        padding: 30px 25px;
+    }
+    
+    .header-fixed {
+        height: 70px;
+    }
+    
+    .wiki-section {
+        padding-top: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-wrapper {
+        min-height: auto;
+    }
+    
+    .wiki-container {
+        flex-direction: column;
+        gap: 25px;
+        align-items: stretch;
+    }
+    
+    .sidebar {
+        flex: 0 0 auto;
+        order: 1;
+        min-height: auto;
+    }
+    
+    .wiki-content {
+        padding: 25px 20px;
+        order: 2;
+        min-height: auto;
+    }
+    
+    .header-fixed {
+        height: 60px;
+    }
+    
+    .wiki-section {
+        padding: 80px 0 30px;
+    }
+    
+    .content-title {
+        font-size: 2rem;
+    }
+    
+    .content-subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .video-container iframe {
+        height: 250px;
+    }
+    
+    .sidebar-nav ul {
+        overflow-y: visible;
+    }
+}
+
+@media (max-width: 480px) {
+    .wiki-content {
+        padding: 20px 15px;
+    }
+    
+    .sidebar-title {
+        font-size: 1.1rem;
+        padding: 12px 20px;
+    }
+    
+    .nav-item {
+        font-size: 0.95rem;
+        padding: 10px 15px;
+    }
+}

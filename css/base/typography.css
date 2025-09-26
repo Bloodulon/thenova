@@ -6,6 +6,7 @@ h1 {
 }
 
 h2 {
+    font-family: 'Monocraft', monospace;
     font-size: 36px;
     font-weight: 600;
     margin: 140px 0;
