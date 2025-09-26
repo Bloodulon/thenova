@@ -1,12 +1,3 @@
-/*
- __________.__                    .___    .__
- \______   \  |   ____   ____   __| _/_ __|  |   ____   ____  
- |    |  _/  |  /  _ \ /  _ \ / __ |  |  \  |  /  _ \ /    \ 
- |    |   \  |_(  <_> |  <_> ) /_/ |  |  /  |_(  <_> )   |  \
- |______  /____/\____/ \____/\____ |____/|____/\____/|___|  / 
-          \/                        \/                      \/
-*/
-
 @import url('./base/colors.css');
 @import url('./base/reset.css');
 @import url('./base/typography.css');
@@ -26,20 +17,9 @@ body {
     overflow-x: hidden;
 }
 
-.header-fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    height: 80px;
-    background-color: var(--color-header-bg, #0a0a1a);
-    flex-shrink: 0;
-}
-
 .wiki-section {
-    padding: 100px 0 40px;
-    background-color: var(--color-bg-dark, #0f0f1a);
+    padding: 110px 0 40px;
+    background-color: radial-gradient(circle, #090e24, #000000);
     flex: 1;
 }
 
@@ -49,48 +29,54 @@ body {
     max-width: 1400px;
     margin: 0 auto;
     gap: 40px;
-    align-items: stretch;
+    align-items: flex-start;
 }
 
 .sidebar {
-    flex: 0 0 300px;
-    background-color: var(--color-card-bg, #1a1a2e);
+    flex: 0 0 350px;
+    background: radial-gradient(circle, #15162e9c, #12143b98);
     padding: 25px 0;
     border-radius: 12px;
-    position: static;
+    position: sticky;
+    top: 110px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.05);
+    height: auto;
+    max-height: calc(100vh - 110px);
     display: flex;
     flex-direction: column;
     min-height: 0;
+    overflow: hidden;
+    z-index: 3;
+    box-sizing: border-box;
 }
 
 .sidebar-title {
     color: #fff;
-    font-size: 1.3rem;
+    text-align: center;
+    font-size: 2.7rem;
     font-weight: 700;
     padding: 15px 25px;
     margin-bottom: 15px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Monocraft', monospace;
     flex-shrink: 0;
 }
 
 .sidebar-nav {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+    flex: 1 1 auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 5px;
+    display: block;
 }
 
 .sidebar-nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    flex: 1;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
+    height: auto;
+    display: block;
 }
 
 .nav-item {
@@ -98,24 +84,32 @@ body {
     padding: 14px 25px;
     text-decoration: none;
     color: var(--color-text-secondary, #a0a0c0);
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     font-size: 0.98rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Monocraft', monospace;
     border-radius: 0 8px 8px 0;
-    flex-shrink: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    width: 100%;
+    white-space: normal;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    line-height: 1.3;
 }
 
 .nav-item:hover {
-    background-color: var(--color-accent-hover, #2a2a44);
+    background: linear-gradient(90deg, #1c147aad 40%, #13066b9f 60%);
+    padding: 13px 25px 13px;
     color: #fff;
     transform: translateX(5px);
+    border-radius: 25px;
 }
 
 .nav-item.active {
-    background-color: var(--color-accent, #4a4a80);
+    background-color: var(--color-accent, #56439baf);
     color: #fff;
-    border-left: 4px solid var(--color-primary, #bb86fc);
-    padding-left: 21px;
+    border-left: 25px solid var(--color-primary, #261a4452);
+    padding-left: 25px;
     font-weight: 600;
 }
 
@@ -126,14 +120,16 @@ body {
     text-transform: uppercase;
     letter-spacing: 1.2px;
     font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Monocraft', monospace;
     margin-top: 10px;
-    flex-shrink: 0;
+    white-space: normal;
+    word-break: break-all;
+    overflow-wrap: break-word;
 }
 
 .wiki-content {
     flex-grow: 1;
-    background-color: var(--color-card-bg, #1a1a2e);
+    background: radial-gradient(circle, #15162e9c, #12143b98);
     padding: 40px;
     border-radius: 12px;
     color: var(--color-text-primary, #e0e0e0);
@@ -143,11 +139,21 @@ body {
     line-height: 1.7;
     display: flex;
     flex-direction: column;
+    min-height: 600px;
+    animation: slideInFromRight 0.5s ease-out forwards;
+    opacity: 0;
+    transform: translateX(100%);
 }
 
-.content-header {
-    flex-shrink: 0;
-    margin-bottom: 20px;
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .content-banner {
@@ -181,6 +187,12 @@ body {
     font-size: 1.05rem;
     margin-bottom: 20px;
     text-align: justify;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
 }
 
 .wiki-content h1, .wiki-content h2 {
@@ -188,7 +200,7 @@ body {
     flex-shrink: 0;
 }
 
-.dummy-content {
+.dop-content {
     margin-top: 40px;
     padding: 20px;
     background: rgba(255, 255, 255, 0.05);
@@ -197,6 +209,15 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+}
+
+.dop-content p {
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
 }
 
 .video-container {
@@ -218,7 +239,7 @@ body {
 }
 
 footer {
-    flex-shrink: 0; /* Не сжимается */
+    flex-shrink: 0;
     background-color: var(--color-footer-bg, #0a0a1a);
     padding: 20px 0;
     text-align: center;
@@ -233,10 +254,13 @@ footer {
     
     .sidebar {
         flex: 0 0 250px;
+        top: 90px;
+        max-height: calc(100vh - 110px);
     }
     
     .wiki-content {
         padding: 30px 25px;
+        min-height: 500px;
     }
     
     .header-fixed {
@@ -261,8 +285,19 @@ footer {
     
     .sidebar {
         flex: 0 0 auto;
+        position: static;
+        top: auto;
+        max-height: none;
         order: 1;
-        min-height: auto;
+        height: auto;
+        overflow-y: visible;
+        overflow-x: visible;
+    }
+    
+    .nav-item {
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
     }
     
     .wiki-content {
@@ -289,10 +324,6 @@ footer {
     
     .video-container iframe {
         height: 250px;
-    }
-    
-    .sidebar-nav ul {
-        overflow-y: visible;
     }
 }
 
