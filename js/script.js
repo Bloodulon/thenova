@@ -2,8 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const howToPlayButton = document.getElementById('how-to-play-btn');
     const playdiscord = document.getElementById('play-discord');
-
-    const copyButton = document.getElementById('copy-btn');
+    const faqSection = document.getElementById('id-faq');
     const serverIp = 'mc.thenova.vip';
 
     function copyIp() {
@@ -24,10 +23,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    if (copyButton) {
-        copyButton.addEventListener('click', copyIp);
+    if (faqSection) {
+        faqSection.addEventListener('click', () => {
+            window.location.href = 'index.html#faq-section';
+        });
     }
-});
+
+}); 
+
 
 document.addEventListener('DOMContentLoaded', (event) => {
     const animatedElement = document.querySelector('.info-cards');

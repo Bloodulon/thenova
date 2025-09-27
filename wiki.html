@@ -37,41 +37,37 @@
                     <h2 class="sidebar-title">WIKI</h2>
                     <nav class="sidebar-nav">
                         <ul>
-                            <li><a href="#" class="nav-item active">Основная информация</a></li>
-                            <li><a href="#" class="nav-item">Как играть</a></li>
-                            <li><a href="https://t.me/thenovavip" class="nav-item">Ссылки</a></li>
-                            <li><a href="index.html#faq-section" class="nav-item">Частые вопросы</a></li>
-                            
+                            <li><b href="#" class="nav-item active">Основная информация</b></li>
+                            <li><b class="nav-item" id="how-to-play-btn">Ссылки</b></li>
+                            <li><b class="nav-item" id="id-faq">Частые вопросы</b></li>
+
                             <li class="nav-heading">Нововведения</li>
-                            <li><a href="#" class="nav-item">Команды</a></li>
-                            <li><a href="#" class="nav-item">Крафты</a></li>
-                            <li><a href="#" class="nav-item">Разные механики</a></li>
-                            <li><a href="#" class="nav-item">Варка алкоголя</a></li>
+                            <li><b class="nav-item" data-content="commands">Команды</b></li>
+                            <li><b href="#" class="nav-item" data-content="crafts" id="id-crafts">Крафты</b></li>
+                            <li><b href="#" class="nav-item" data-content="mechanics">Новые механики</b></li>
+                            <li><b href="#" class="nav-item" data-content="alco">Варка алкоголя</b></li>
 
                             <li class="nav-heading">Прочее</li>
-                            <li><a href="#" class="nav-item">Моды и результаты</a></li>
+                            <li><b href="#" class="nav-item" data-content="story">Cюжет</b></li>
                         </ul>
                     </nav>
                 </aside>
 
                 <main class="wiki-content">
+                    <div id="dynamic-wiki-content">
                     
-                    <h1 class="content-title">Основная информация</h1>
-                    
-                    <p>Добро пожаловать на Andromeda — полу-ванильный сервер Майнкрафт!</p>
-                    <p>Управляй захватывающим сюжетом вместе с другими игроками, участвуй в эпичных ивентах, которые поднимут тебе настроение, и наслаждайся ванильной атмосферой с лёгким привкусом уникальности благодаря тщательно подобранным датапакам и плагинам.</p>
-                    
-                    <h2 class="content-subtitle">Как играется?</h2>
-                    <p>Для игры на проекте вам необходимо вступить в наш Discord и подать заявку. Далее cначала стоит ознакомиться с правилами сервера. Там же в дискорде можете узнать версию и ip сервера. Теперь вы можете зайти и наслаждаться игрой и дружным сообществом.</p>
+                        <h1 class="content-title">Основная информация</h1>
+                        
+                        <p>Добро пожаловать на Andromeda — полу-ванильный сервер Майнкрафт!</p>
+                        <p>Управляй захватывающим сюжетом вместе с другими игроками, участвуй в эпичных ивентах, которые поднимут тебе настроение, и наслаждайся ванильной атмосферой с лёгким привкусом уникальности благодаря тщательно подобранным датапакам и плагинам.</p>
+                        
+                        <h2 class="content-subtitle">Как играется?</h2>
+                        <p>Для игры на проекте вам необходимо вступить в наш Discord и подать заявку. Далее cначала стоит ознакомиться с правилами сервера. Там же в дискорде можете узнать версию и ip сервера. Теперь вы можете зайти и наслаждаться игрой и дружным сообществом.</p>
 
-                    <div class="video-container">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/XXXXXX" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    
-                    <div class="dop-content">
-                        <h2>Дополнительный контент для теста</h2>
-                        <p>Это длинный абзац для проверки высоты sidebar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/XXXXXX" frameborder="0" allowfullscreen></iframe>
+                        </div>
+
                     </div>
                 </main>
 
@@ -90,6 +86,7 @@
         </div>
     </footer>
 
+    <script src="js/wiki.js"></script>
     <script src="js/particle.js"></script>
     <script src="js/script.js"></script>
 </body>

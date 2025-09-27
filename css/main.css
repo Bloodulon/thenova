@@ -53,13 +53,15 @@ html {
 }
 
 .image-content {
-    max-width: 45%;
+    max-width: 100%;
+    margin: 20px 0;
 }
 
 .image-content img {
-    width: 100%;
+    width: 100%; 
     height: auto;
     border-radius: 10px;
+    display: block;
 }
 
 .social-links {
